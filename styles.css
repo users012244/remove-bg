@@ -1,0 +1,6 @@
+:root{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial;line-height:1.4}
+body{max-width:900px;margin:2rem auto;padding:1rem}
+.filecard{display:inline-block;padding:.6rem;border:1px dashed #888;border-radius:8px;cursor:pointer;margin-bottom:1rem}
+.controls{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;margin-bottom:1rem}
+#status{margin:0.5rem 0;color:#444}
+button{padding:.5rem 1rem;border-radius:6px;border:1px solid #666;background:#f3f3f3;cursor:pointer}
