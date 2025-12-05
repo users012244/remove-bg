@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Video BG Remover</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <h1>Rimuovi/Sostituisci Sfondo Video</h1>
+
+    <label class="filecard">
+      <span>Carica video (mp4/webm)</span>
+      <input id="videoInput" type="file" accept="video/*" />
+    </label>
+
+    <div class="controls">
+      <label>
+        Sostituisci con:
+        <select id="bgType">
+          <option value="transparent">Trasparente (WebM con alpha)</option>
+          <option value="color">Colore</option>
+          <option value="image">Immagine</option>
+        </select>
+      </label>
+
+      <label id="colorPickerLabel" style="display:none;">
+        Colore:
+        <input id="bgColor" type="color" value="#00ff00" />
+      </label>
+
+      <label id="imagePickerLabel" style="display:none;">
+        Immagine sfondo:
+        <input id="bgImage" type="file" accept="image/*" />
+      </label>
+
+      <button id="processBtn" disabled>Processa</button>
+    </div>
+
+    <div id="status"></div>
+
+    <h2>Anteprima risultato</h2>
+    <video id="resultVideo" controls style="max-width:100%; display:none;"></video>
+
+    <a id="downloadLink" href="#" download="output.webm" style="display:none;">Scarica risultato</a>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
